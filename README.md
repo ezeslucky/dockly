@@ -1,4 +1,4 @@
-
+Dockly is a free, self-hostable Platform as a Service  that simplifies the deployment and management of applications and databases.
  
  ### Features
  
