@@ -1,10 +1,10 @@
 import { Inter, Lexend } from "next/font/google";
 import "@/styles/tailwind.css";
 import "react-photo-view/dist/react-photo-view.css";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://dokploy.com"),
