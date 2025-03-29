@@ -9,7 +9,7 @@ import { setRequestLocale } from "next-intl/server";
 export const metadata: Metadata = {
 	metadataBase: new URL("https://dokploy.com"),
 	title: {
-		default: "Dokploy - Effortless Deployment Solutions",
+		default: "Dockly - Effortless Deployment Solutions",
 		template: "%s | Simplify Your DevOps",
 	},
 	icons: {
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
 		},
 	},
 	description:
-		"Streamline your deployment process with Dokploy. Effortlessly manage applications and databases on any VPS using Docker and Traefik for improved performance and security.",
-	applicationName: "Dokploy",
+		"Streamline your deployment process with Dockly. Effortlessly manage applications and databases on any VPS using Docker and Traefik for improved performance and security.",
+	applicationName: "Dockly",
 	keywords: [
 		"Dokploy",
 		"Docker",
@@ -42,10 +42,10 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		url: "https://dokploy.com",
-		title: "Dokploy - Effortless Deployment Solutions",
+		title: "Dockly - Effortless Deployment Solutions",
 		description:
-			"Simplify your DevOps with Dokploy. Deploy applications and manage databases efficiently on any VPS.",
-		siteName: "Dokploy",
+			"Simplify your DevOps with Dockly. Deploy applications and manage databases efficiently on any VPS.",
+		siteName: "Dockly",
 		images: [
 			{
 				url: "https://dokploy.com/og.png",
@@ -60,11 +60,11 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		site: "@Dokploy",
-		creator: "@Dokploy",
-		title: "Dokploy - Simplify Your DevOps",
+		site: "@ezeslucky",
+		creator: "@ezeslucky",
+		title: "Dockly ",
 		description:
-			"Deploy applications and manage databases with ease using Dokploy. Learn how our platform can elevate your infrastructure management.",
+			"Dockly applications and manage databases with ease using Dokploy. Learn how our platform can elevate your infrastructure management.",
 		images: "https://dokploy.com/og.png",
 	},
 };
