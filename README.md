@@ -1,4 +1,8 @@
-Dockly includes multiple features to make your life easier.
+
+ 
+ ### Features
+ 
+ Dockly includes multiple features to make your life easier.
 
 - **Applications**: Deploy any type of application (Node.js, PHP, Python, Go, Ruby, etc.).
 - **Databases**: Create and manage databases with support for MySQL, PostgreSQL, MongoDB, MariaDB, and Redis.
