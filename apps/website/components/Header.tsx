@@ -12,6 +12,7 @@ import { trackGAEvent } from "./analitycs";
 import { Logo } from "./shared/Logo";
 import AnimatedGradientText from "./ui/animated-gradient-text";
 import { Button, buttonVariants } from "./ui/button";
+import Image from "next/image";
 
 function MobileNavLink({
 	href,
@@ -159,7 +160,7 @@ export function Header() {
 				<nav className="relative z-50 flex justify-between">
 					<div className="flex items-center md:gap-x-12">
 						<Link href="/" aria-label="Home">
-							<Logo className="h-10 w-auto" />
+							<Image src="/icon.svg" alt="logo" width={50} height={50} />
 						</Link>
 						<div className="hidden md:flex md:gap-x-6">
 							<NavLink href="/#pricing">{t("navigation.pricing")}</NavLink>
@@ -171,7 +172,7 @@ export function Header() {
 						</div>
 					</div>
 					<div className="flex items-center gap-x-4 md:gap-x-5">
-						<Link href="https://x.com/getdokploy" target="_blank">
+						<Link href="https://x.com/ezeslucky" target="_blank">
 							<svg
 								stroke="currentColor"
 								fill="currentColor"
@@ -184,19 +185,7 @@ export function Header() {
 							</svg>
 						</Link>
 
-						{/* <Link
-							className={buttonVariants({
-								variant: "outline",
-								className: " flex items-center gap-2 !rounded-full",
-							})}
-							href="https://opencollective.com/dokploy"
-							target="_blank"
-						>
-							<span className="text-sm font-semibold">
-								{t("navigation.support")}{" "}
-							</span>
-							<HeartIcon className="animate-heartbeat size-4 fill-red-600 text-red-500 " />
-						</Link> */}
+						
 
 						<Button className="rounded-full max-md:hidden" asChild>
 							<Link

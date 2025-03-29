@@ -13,6 +13,7 @@ import { Container } from "./Container";
 import { NavLink } from "./NavLink";
 import { Logo } from "./shared/Logo";
 import { buttonVariants } from "./ui/button";
+import Image from "next/image";
 
 const I18nIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
 	<svg
@@ -43,10 +44,11 @@ export function Footer() {
 			<Container>
 				<div className="py-16">
 					<div className="flex flex-col items-center gap-2">
-						<Logo className="mx-auto h-10 w-auto" />
+						<Image src="/icon.svg"  alt="logo" width={25} height={25} />
 						<span className="text-center text-sm font-medium text-primary">
 							Dokploy
 						</span>
+					
 					</div>
 
 					<nav className="mt-10 text-sm" aria-label="quick links">
@@ -62,7 +64,7 @@ export function Footer() {
 				<div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
 					<div className="flex gap-x-6 items-center">
 						<Link
-							href="https://x.com/getdokploy"
+							href="https://x.com/ezeslucky"
 							className="group"
 							aria-label="Dokploy on Twitter"
 						>
@@ -78,7 +80,7 @@ export function Footer() {
 							</svg>
 						</Link>
 						<Link
-							href="https://github.com/dokploy/dokploy"
+							href="https://github.com/ezeslucky/dockly"
 							className="group"
 							aria-label="Dokploy on GitHub"
 						>
@@ -115,11 +117,12 @@ export function Footer() {
 							</SelectContent>
 						</Select>
 					</div>
-					<p className="mt-6 text-sm text-muted-foreground sm:mt-0">
-						{t("footer.copyright", {
-							year: new Date().getFullYear(),
-						})}
-					</p>
+					<h1 className="dark:text-gray-300 mt-4">
+              Build by{" "}
+              <span className="text-[#039ee4]">
+                <Link href="https://x.com/ezeslucky">@ezeslucky</Link>
+              </span>
+            </h1>
 				</div>
 			</Container>
 		</footer>
