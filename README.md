@@ -1,91 +1,84 @@
-# Contributing
+# Turborepo starter
 
-Hey, thanks for your interest in contributing to Dokploy! We appreciate your help and taking your time to contribute.
+This Turborepo starter is maintained by the Turborepo core team.
 
-Before you start, please first discuss the feature/bug you want to add with the owners and comunity via github issues.
+## Using this example
 
-We have a few guidelines to follow when contributing to this project:
+Run the following command:
 
-- [Commit Convention](#commit-convention)
-- [Setup](#setup)
-- [Development](#development)
-- [Build](#build)
-- [Pull Request](#pull-request)
-
-## Commit Convention
-
-Before you create a Pull Request, please make sure your commit message follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-
-### Commit Message Format
-
-```
-<type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
+```sh
+npx create-turbo@latest
 ```
 
-#### Type
+## What's inside?
 
-Must be one of the following:
+This Turborepo includes the following packages/apps:
 
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Documentation only changes
-- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **perf**: A code change that improves performance
-- **test**: Adding missing tests or correcting existing tests
-- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-- **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-- **chore**: Other changes that don't modify `src` or `test` files
-- **revert**: Reverts a previous commit
+### Apps and Packages
 
-Example:
+- `docs`: a [Next.js](https://nextjs.org/) app
+- `web`: another [Next.js](https://nextjs.org/) app
+- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+### Utilities
+
+This Turborepo has some additional tools already setup for you:
+
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
+
+### Build
+
+To build all apps and packages, run the following command:
 
 ```
-feat: add new feature
+cd my-turborepo
+pnpm build
 ```
 
+### Develop
 
-## Pull Request
+To develop all apps and packages, run the following command:
 
-- The `main` branch is the source of truth and should always reflect the latest stable release.
-- Create a new branch for each feature or bug fix.
-- Make sure to add tests for your changes.
-- Make sure to update the documentation for any changes Go to the [docs.dokploy.com](https://docs.dokploy.com) website to see the changes.
-- When creating a pull request, please provide a clear and concise description of the changes made.
-- If you include a video or screenshot, would be awesome so we can see the changes in action.
-- If your pull request fixes an open issue, please reference the issue in the pull request description.
-- Once your pull request is merged, you will be automatically added as a contributor to the project.
-
-Thank you for your contribution!
-
-## Docs
-
-To run the docs locally, run the following command:
-
-```bash
-pnpm run docs:dev
+```
+cd my-turborepo
+pnpm dev
 ```
 
-To build the docs, run the following command:
+### Remote Caching
 
-```bash
-pnpm run docs:build
+> [!TIP]
+> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+
+Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+
+```
+cd my-turborepo
+npx turbo login
 ```
 
-## Website
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
 
-To run the website locally, run the following command:
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
 
-```bash
-pnpm run website:dev
+```
+npx turbo link
 ```
 
-To build the website, run the following command:
+## Useful Links
 
-```bash
-pnpm run website:build
-```
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
