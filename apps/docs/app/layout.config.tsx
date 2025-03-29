@@ -81,7 +81,7 @@ export const baseOptions: BaseLayoutProps = {
 		},
 		{
 			text: "Github",
-			url: "https://github.com/dokploy/dokploy",
+			url: "https://github.com/ezeslucky/dockly.git",
 			active: "nested-url",
 			icon: (
 				<>

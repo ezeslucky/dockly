@@ -38,7 +38,8 @@ export async function generateMetadata(
 	const ogUrl = new URL(
 		`/${locale}/api/og`,
 		process.env.NODE_ENV === "production"
-			?"http://localhost:3001" : "http://localhost:3000"
+			? "https://dokploy.com"
+			: "http://localhost:3000",
 	);
 	ogUrl.searchParams.set("slug", slug);
 
@@ -68,7 +69,17 @@ export async function generateMetadata(
 	};
 }
 
+// export async function generateStaticParams() {
+// 	const posts = await getPosts();
+// 	const locales = ["en", "fr", "zh-Hans"];
 
+// 	return posts.flatMap((post) =>
+// 		locales.map((locale) => ({
+// 			locale,
+// 			slug: post.slug,
+// 		})),
+// 	);
+// }
 
 export default async function BlogPostPage({ params }: Props) {
 	const { slug } = await params;

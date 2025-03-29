@@ -19,13 +19,8 @@ export default async function Home({ params }: { params: { locale: string } }) {
 				<FirstFeaturesSection />
 				<SecondaryFeaturesSections />
 				<StatsSection />
-				<Testimonials />
-				<div className="w-full relative">
-					<Pricing />
-				</div>
 				<Faqs />
-				<Sponsors />
-				<CallToAction />
+				[]
 			</main>
 		</div>
 	);
