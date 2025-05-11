@@ -155,17 +155,17 @@ install_dokploy() {
     traefik:v3.1.2
 
     # Optional: Use docker service create instead of docker run
-    #   docker service create \
-    #     --name dokploy-traefik \
-    #     --constraint 'node.role==manager' \
-    #     --network dokploy-network \
-    #     --mount type=bind,source=/etc/dokploy/traefik/traefik.yml,target=/etc/traefik/traefik.yml \
-    #     --mount type=bind,source=/etc/dokploy/traefik/dynamic,target=/etc/dokploy/traefik/dynamic \
-    #     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
-    #     --publish mode=host,published=443,target=443 \
-    #     --publish mode=host,published=80,target=80 \
-    #     --publish mode=host,published=443,target=443,protocol=udp \
-    #     traefik:v3.1.2
+      docker service create \
+        --name dokploy-traefik \
+        --constraint 'node.role==manager' \
+        --network dokploy-network \
+        --mount type=bind,source=/etc/dokploy/traefik/traefik.yml,target=/etc/traefik/traefik.yml \
+        --mount type=bind,source=/etc/dokploy/traefik/dynamic,target=/etc/dokploy/traefik/dynamic \
+        --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
+        --publish mode=host,published=443,target=443 \
+        --publish mode=host,published=80,target=80 \
+        --publish mode=host,published=443,target=443,protocol=udp \
+        traefik:v3.1.2
 
 
     GREEN="\033[0;32m"
